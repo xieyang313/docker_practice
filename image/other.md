@@ -1,4 +1,4 @@
-## 其它生成镜像的方法
+## 其它制作镜像的方式
 
 除了标准的使用 `Dockerfile` 生成镜像的方法外，由于各种特殊需求和历史原因，还提供了一些其它方法用以生成镜像。
 
@@ -20,10 +20,10 @@ sha256:f477a6e18e989839d25223f301ef738b69621c4877600ae6467c4e5289822a79B/78.42 M
 
 这条命令自动下载了 `ubuntu-14.04-x86_64-minimal.tar.gz` 文件，并且作为根文件系统展开导入，并保存为镜像 `openvz/ubuntu:14.04`。
 
-导入成功后，我们可以用 `docker images` 看到这个导入的镜像：
+导入成功后，我们可以用 `docker image ls` 看到这个导入的镜像：
 
 ```bash
-$ docker images openvz/ubuntu
+$ docker image ls openvz/ubuntu
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 openvz/ubuntu       14.04               f477a6e18e98        55 seconds ago      214.9 MB
 ```
@@ -47,7 +47,7 @@ Docker 还提供了 `docker load` 和 `docker save` 命令，用以将镜像保�
 比如我们希望保存这个 `alpine` 镜像。
 
 ```bash
-$ docker images alpine
+$ docker image ls alpine
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 alpine              latest              baa5d63471ea        5 weeks ago         4.803 MB
 ```
